@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app",
     "test": "mocha test --exit --timeout 10000",
     "coverage": "nyc --reporter=html --reporter=text npm run test"
   },

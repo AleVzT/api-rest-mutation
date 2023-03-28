@@ -62,3 +62,8 @@ Esto instalará todas las dependencias o paquetes de node necesarios para levant
 ```
 
 Una vez ejecutado este comando y compilado el codigo puedes consumir los servicios del backend server de la forma que prefieras.
+
+## NOTA:
+En la raiz de nuestro directorio tenemos un archivo llamado .env.temp  📋  Lo primero que debemos hacer es cambiarle el nombre al archivo y dejarlo en .env luego de eso dentro del archivo debemos agregar en la variable DB_CNN el DB Connect generado en mongodb.
+
+Toma encuenta que este es un paso muy importante para poder configurar la conexion con tu base de datos.
