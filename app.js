@@ -21,17 +21,20 @@ app.use(require('./routes/stats'));
 
 // Configuracion de la aplicacion para manejar fluctuaciones agresivas de trafico
 // Implementacion de un balanceador de carga utilizando el modulo cluster
-const numCPUs = require('os').cpus().length;
+/* const numCPUs = require('os').cpus().length;
 
 if(cluster.isMaster) {
   for (let i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
 } else {
-  app.listen( process.env.PORT, () => {
+  const server = app.listen( process.env.PORT, () => {
     console.log(`Server corriendo en puerto ${ process.env.PORT }`);
   });
+} */
 
-}
+const server = app.listen( process.env.PORT, () => {
+  console.log(`Server corriendo en puerto ${ process.env.PORT }`);
+});
 
-module.exports =  app;
+module.exports = { app, server };

@@ -9,9 +9,9 @@ const statsController = async (req, res) => {
 
     const ratio = countTrue / countFalse;
     // Dejo esta formula aca la cual considero la correcta para calcular el ratio
-    const ratioAditional = countTrue / (countTrue + countFalse);
+    const ratio_aditional = countTrue / (countTrue + countFalse);
 
-    const stats = { count_mutation: countTrue, count_no_mutations: countFalse, ratio, ratioAditional }; 
+    const stats = { count_mutation: countTrue, count_no_mutation: countFalse, ratio, ratio_aditional }; 
 
     return res.json(stats);
   } catch (error) {
